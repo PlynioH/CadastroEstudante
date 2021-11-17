@@ -11,8 +11,23 @@
     <h2>Informações do(a) estudante</h2>
     <div><span>Código: </span>{{selectedStudent.id}}</div>
     <div>
-        <label for="name">Nome do Estudante: </label>
+        <label for="name">Nome: </label>
         <input id="name" [(ngModel)]="selectedStudent.name" placeholder="name">
+        <br/>
+        <label for="age">Idade: </label>
+        <input id="age" [(ngModel)]="selectedStudent.age" placeholder="age">
+        <br/>
+        <label for="sex">Sexo: </label>
+        <input id="sex" [(ngModel)]="selectedStudent.sex" placeholder="sex">
+        <br/>
+        <label for="cpf">CPF: </label>
+        <input id="cpf" [(ngModel)]="selectedStudent.cpf" placeholder="cpf">
+        <br/>
+        <label for="address">Endereço: </label>
+        <input id="address" [(ngModel)]="selectedStudent.address" placeholder="address">
+        <br/>
+        <label for="blood">Tipo sanguíneo: </label>
+        <input id="blood" [(ngModel)]="selectedStudent.blood" placeholder="blood">
     </div>
     <p>Funcionando Corretamente!</p>
 </div>
