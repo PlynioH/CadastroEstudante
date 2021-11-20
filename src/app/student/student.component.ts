@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from '../student';
 import { STUDENT } from '../mock-student';
+import { StudentService } from '../student.service';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-student',
@@ -9,16 +11,20 @@ import { STUDENT } from '../mock-student';
 })
 export class StudentComponent implements OnInit {
 
-  student = STUDENT;
   selectedStudent?: Student;
+  students: Student[] = [];
 
-  constructor() { }
+  constructor(private studentService: StudentService, private messageService: MessageService) { }
 
   ngOnInit(): void {
+    this.getStudents();
   }
-
   onSelect(student: Student): void{
     this.selectedStudent = student;
+    this.messageService.add(`StudentComponent: Selected student id=${student.id}`);
   }
-
+  getStudents(): void {
+    this.studentService.getStudents()
+        .subscribe(students => this.students = students);
+  }
 }
