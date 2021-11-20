@@ -1,0 +1,25 @@
+<div *ngIf="student">
+
+    <h2>Informações do(a) Aluno(a) {{student.name}}</h2>
+    <div><span>Código: </span>{{student.id}}</div>
+    <div>
+        <label for="student-name">Nome do Estudante: </label>
+        <input id="student-name" [(ngModel)]="student.name" placeholder="name">
+        <br />
+        <label for="student-age">Idade: </label>
+        <input id="student-age" [(ngModel)]="student.age" placeholder="age">
+        <br />
+        <label for="student-sex">Sexo: </label>
+        <input id="student-sex" [(ngModel)]="student.sex" placeholder="sex">
+        <br />
+        <label for="student-cpf">CPF: </label>
+        <input id="student-cpf" [(ngModel)]="student.cpf" placeholder="cpf">
+        <br />
+        <label for="student-address">Endereço: </label>
+        <input id="student-address" [(ngModel)]="student.address" placeholder="address">
+        <br />
+        <label for="student-blood">Tipo sanguíneo: </label>
+        <input id="student-blood" [(ngModel)]="student.blood" placeholder="blood">
+    </div>
+  
+  </div>
