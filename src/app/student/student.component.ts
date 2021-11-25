@@ -10,18 +10,12 @@ import { MessageService } from '../message.service';
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit {
-
-  selectedStudent?: Student;
   students: Student[] = [];
 
-  constructor(private studentService: StudentService, private messageService: MessageService) { }
+  constructor(private studentService: StudentService) { }
 
   ngOnInit(): void {
     this.getStudents();
-  }
-  onSelect(student: Student): void{
-    this.selectedStudent = student;
-    this.messageService.add(`StudentComponent: Selected student id=${student.id}`);
   }
   getStudents(): void {
     this.studentService.getStudents()
