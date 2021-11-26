@@ -13,11 +13,11 @@ export class DashboardComponent implements OnInit {
   constructor(private studentService: StudentService) { }
 
   ngOnInit(): void {
-    this.getStudent();
+    this.getStudents();
   }
 
-  getStudent(): void {
-    this.studentService.getStudent()
-      .subscribe(student => this.student = student.slice(1, 5));
+  getStudents(): void {
+    this.studentService.getStudents()
+      .subscribe(students => this.student = students.slice(1, 5));
   }
 }

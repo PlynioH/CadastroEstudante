@@ -1,6 +1,6 @@
 <h2>Melhores Estudantes</h2>
-<div class="student-menu">
-  <a *ngFor="let student of students"
+<div class="students-menu">
+  <a *ngFor="let student of student"
     routerLink="/detail/{{student.id}}">
     {{student.name}}
   </a>

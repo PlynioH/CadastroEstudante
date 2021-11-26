@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { StudentComponent } from './student/student.component';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
 import { MessagesComponent } from './messages/messages.component';
-import { StudentRoutingModule } from './student-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
@@ -21,10 +20,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    StudentRoutingModule
+    FormsModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
