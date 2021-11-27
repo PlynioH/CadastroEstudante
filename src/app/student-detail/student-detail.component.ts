@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-
 import { Student } from '../student';
 import { StudentService } from '../student.service';
 
@@ -24,12 +23,19 @@ export class StudentDetailComponent implements OnInit {
   }
 
   getStudent(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+    const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
     this.studentService.getStudent(id)
       .subscribe(student => this.student = student);
   }
 
   goBack(): void {
     this.location.back();
+  }
+
+  save(): void {
+    if (this.student) {
+      this.studentService.updateStudent(this.student)
+        .subscribe(() => this.goBack());
+    }
   }
 }

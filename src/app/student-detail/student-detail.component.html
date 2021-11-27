@@ -1,24 +1,25 @@
 <div *ngIf="student">
-    <h2>Estudante {{student.name}}</h2>
-    <div><span>ID: </span>{{student.id}}</div>
-    <div>
-      <label for="student-name">Nome: </label>
-      <input id="student-name" [(ngModel)]="student.name" placeholder="Student name"/>
-      <br/>
-      <label for="student-cpf">CPF: </label>
-      <input id="student-cpf" [(ngModel)]="student.cpf" placeholder="Student cpf"/>
-      <br/>
-      <label for="student-age">Idade: </label>
-      <input id="student-age" [(ngModel)]="student.age" placeholder="Student age"/>
-      <br/>
-      <label for="student-sex">Sexo: </label>
-      <input id="student-sex" [(ngModel)]="student.sex" placeholder="Student sex"/>
-      <br/>
-      <label for="student-address">Endereço: </label>
-      <input id="student-address" [(ngModel)]="student.address" placeholder="Student address"/>
-      <br/>
-      <label for="student-blood">Tipo Sanguineo: </label>
-      <input id="student-blood" [(ngModel)]="student.blood" placeholder="Student blood"/>
-    </div>
-    <button (click)="goBack()">Voltar</button>
+  <h2>Estudante {{student.name}} Informações</h2>
+  <div><span>id: </span>{{student.id}}</div>
+  <div>
+    <label for="student-name">Nome: </label>
+    <input id="student-name" [(ngModel)]="student.name" placeholder="Student name" />
+    <br />
+    <label for="student-cpf">CPF: </label>
+    <input id="student-cpf" [(ngModel)]="student.cpf" placeholder="Student cpf" />
+    <br />
+    <label for="student-age">Idade: </label>
+    <input id="student-age" [(ngModel)]="student.age" placeholder="Student age" />
+    <br />
+    <label for="student-sex">Sexo: </label>
+    <input id="student-sex" [(ngModel)]="student.sex" placeholder="Student sex" />
+    <br />
+    <label for="student-address">Endereço: </label>
+    <input id="student-address" [(ngModel)]="student.address" placeholder="Student address" />
+    <br />
+    <label for="student-blood">Tipo Sanguineo: </label>
+    <input id="student-blood" [(ngModel)]="student.blood" placeholder="Student blood" />
   </div>
+  <button (click)="goBack()">Voltar</button>
+  <button (click)="save()">Salvar</button>
+</div>
