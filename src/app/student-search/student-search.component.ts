@@ -22,7 +22,7 @@ export class StudentSearchComponent implements OnInit {
     this.students$ = this.searchTerms.pipe(
       debounceTime(300),
       distinctUntilChanged(),
-      switchMap((term: string) => this.studentService.searchStudent(term)),
+      switchMap((term: string) => this.studentService.searchStudents(term)),
     );
   }
 }

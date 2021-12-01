@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
-import { StudentComponent } from './student/student.component';
+import { StudentsComponent } from './student/student.component';
 import { StudentSearchComponent } from './student-search/student-search.component';
 import { MessagesComponent } from './messages/messages.component';
 
@@ -25,7 +25,7 @@ import { MessagesComponent } from './messages/messages.component';
   declarations: [
     AppComponent,
     DashboardComponent,
-    StudentComponent,
+    StudentsComponent,
     StudentDetailComponent,
     MessagesComponent,
     StudentSearchComponent
